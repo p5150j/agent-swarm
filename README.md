@@ -1,5 +1,7 @@
 # AI Agent Collaboration System
 
+![Agent Collaboration System Architecture](Screenshot%202025-05-17%20at%205.44.29%E2%80%AFPM.png)
+
 ## Overview
 
 This project implements a multi-agent collaboration system where each agent (e.g., Product Owner, CTO) has a distinct persona, knowledge base, and communication style. Agents interact iteratively, leveraging their knowledge and role definitions to solve complex tasks together.
@@ -116,19 +118,7 @@ The project uses separate virtual environments for the main application and stag
    pip install -r staging/requirements.txt
    ```
 
-3. **Switching Between Environments**:
-
-   ```bash
-   # Deactivate current environment
-   deactivate
-
-   # Then activate the desired environment
-   source venv/bin/activate  # For main application
-   # or
-   source staging/venv/bin/activate  # For staging tools
-   ```
-
-4. **Environment Management Tips**:
+3. **Environment Management Tips**:
    - Always activate the appropriate environment before running scripts
    - Use `pip freeze > requirements.txt` to update requirements
    - Keep environments separate to avoid dependency conflicts
@@ -151,12 +141,6 @@ When running local LLMs (like llama2:13b), be aware of the following:
      - Good performance with Metal acceleration
      - First run may take 1-2 minutes to load model
      - Subsequent runs will be faster
-
-   - **Mac with Intel**:
-
-     - Slower performance, CPU-only
-     - Model loading may take 2-3 minutes
-     - Consider using smaller models (7B) if performance is an issue
 
    - **Windows/Linux with NVIDIA GPU**:
      - Best performance with CUDA acceleration
