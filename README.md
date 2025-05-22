@@ -63,10 +63,25 @@ requirements.txt
 
 3. Install dependencies:
 
-   ```bash
+ ```bash
+   # Create and activate main venv
+   python -m venv venv
+   source venv/bin/activate  # On Unix/macOS
+
+   # Install main requirements
    pip install -r requirements.txt
-   pip install -r staging/requirements.txt  # For staging tools
    ```
+
+
+   ```bash
+   # Create and activate staging venv
+   python -m venv staging/dataScrape
+   source staging/dataScrape/bin/activate  # On Unix/macOS
+
+   # Install staging requirements
+   pip install -r staging/requirements.txt
+   ```
+
 
 4. Install and configure Ollama:
 
@@ -84,39 +99,41 @@ requirements.txt
    # Verify the model is available
    ollama list
    ```
+   
 
 5. Run the test script:
    ```bash
    python test_agents.py
    ```
 
+
+## Staging Tools
+
+The project includes a set of staging tools for data collection and processing:
+
+- **Profile Scraper**: Collects and processes agent profiles from various sources
+- **Data Processing**: Converts raw data into structured formats for agent knowledge bases
+- **Logging**: Tracks scraping and processing activities
+
+To use the staging tools:
+
+```bash
+cd staging
+python run_scraper.py
+```
+
+## Configuration
+
+- Add or edit knowledge base files in `agents/<role>/knowledge_base/documents/`.
+- Update `role.md` to change an agent's persona, style, or knowledge.
+- Configure staging tools in `staging/config.json`:
+  - Set up profile scraping parameters
+  - Configure data processing options
+  - Adjust logging settings
+
+
 ## Troubleshooting
 
-### Virtual Environment Setup
-
-The project uses separate virtual environments for the main application and staging tools to manage dependencies effectively:
-
-1. **Main Application Environment**:
-
-   ```bash
-   # Create and activate main venv
-   python -m venv venv
-   source venv/bin/activate  # On Unix/macOS
-
-   # Install main requirements
-   pip install -r requirements.txt
-   ```
-
-2. **Staging Tools Environment**:
-
-   ```bash
-   # Create and activate staging venv
-   python -m venv staging/dataScrape
-   source staging/dataScrape/bin/activate  # On Unix/macOS
-
-   # Install staging requirements
-   pip install -r staging/requirements.txt
-   ```
 
 3. **Environment Management Tips**:
    - Always activate the appropriate environment before running scripts
@@ -167,29 +184,6 @@ When running local LLMs (like llama2:13b), be aware of the following:
    ollama pull llama2:7b
    ```
 
-## Configuration
-
-- Add or edit knowledge base files in `agents/<role>/knowledge_base/documents/`.
-- Update `role.md` to change an agent's persona, style, or knowledge.
-- Configure staging tools in `staging/config.json`:
-  - Set up profile scraping parameters
-  - Configure data processing options
-  - Adjust logging settings
-
-## Staging Tools
-
-The project includes a set of staging tools for data collection and processing:
-
-- **Profile Scraper**: Collects and processes agent profiles from various sources
-- **Data Processing**: Converts raw data into structured formats for agent knowledge bases
-- **Logging**: Tracks scraping and processing activities
-
-To use the staging tools:
-
-```bash
-cd staging
-python run_scraper.py
-```
 
 ## Roadmap
 
