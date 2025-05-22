@@ -1,0 +1,13 @@
+{
+    "twitter_api_key": "",
+    "twitter_api_secret": "",
+    "twitter_access_token": "",
+    "twitter_access_token_secret": "",
+    "search_engines": [
+        "google",
+        "bing"
+    ],
+    "max_results": 50,
+    "video_download": true,
+    "transcribe_videos": true
+}
