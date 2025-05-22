@@ -100,8 +100,8 @@ The project uses separate virtual environments for the main application and stag
 
    ```bash
    # Create and activate main venv
-   python -m venv agents
-   source agents/bin/activate  # On Unix/macOS
+   python -m venv venv
+   source venv/bin/activate  # On Unix/macOS
 
    # Install main requirements
    pip install -r requirements.txt
