@@ -13,7 +13,7 @@ This project implements a multi-agent collaboration system where each agent (e.g
 - **Markdown diagrams and pseudocode** 📊: Product Owner uses Mermaid flowcharts; CTO uses Mermaid sequence diagrams and pseudocode.
 - **Iterative, collaborative dialog** 💭: Agents build on each other's reasoning, resulting in robust, realistic conversations.
 - **Emoji-enhanced communication** 😊: Agents use emojis to reinforce their personas and improve clarity.
-- **Automated testing** ✅: Includes scripts to test agent communication and knowledge base usage.
+- **Agent battle script** ✅: Includes scripts to test agent communication and knowledge base usage.
 
 ## System Architecture 🔧
 
