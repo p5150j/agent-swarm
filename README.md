@@ -20,27 +20,47 @@ This project implements a multi-agent collaboration system where each agent (e.g
 ```mermaid
 graph TD
     A[User Input] --> B[Agent System]
-    B --> C[Product Owner Agent]
-    B --> D[CTO Agent]
 
-    C --> E[Knowledge Base]
-    D --> E
-
-    C --> F[Markdown Diagrams]
-    D --> G[Sequence Diagrams]
-
-    E --> H[Response Generation]
-    F --> H
-    G --> H
-
-    H --> I[User Output]
-
-    subgraph Staging Tools
-        J[Profile Scraper] --> K[Raw Data]
-        K --> L[Data Processing]
-        L --> M[Processed Data]
-        M --> N[Agent Profiles]
+    subgraph "Product Owner Agent 👥"
+        C[PO Agent] --> C1[PO Knowledge Base]
+        C --> C2[PO Role Definition]
+        C --> C3[PO Communication Style]
+        C --> C4[PO Decision Framework]
     end
+
+    subgraph "CTO Agent 👨‍💻"
+        D[CTO Agent] --> D1[CTO Knowledge Base]
+        D --> D2[CTO Role Definition]
+        D --> D3[CTO Communication Style]
+        D --> D4[CTO Decision Framework]
+    end
+
+    B --> C
+    B --> D
+
+    %% Agent Interactions
+    C <--> D
+    C -->|Iterative Dialog| D
+    D -->|Technical Feedback| C
+
+    %% Output Generation
+    C --> E[Response Generation]
+    D --> E
+    E --> F[User Output]
+
+    subgraph "Staging Tools 🛠️"
+        G[Profile Scraper] --> H[Raw Data]
+        H --> I[Data Processing]
+        I --> J[Processed Data]
+        J --> K[Agent Profiles]
+        K -->|Updates| C1
+        K -->|Updates| D1
+    end
+
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style C1 fill:#f9f,stroke:#333,stroke-width:1px
+    style D1 fill:#bbf,stroke:#333,stroke-width:1px
 ```
 
 ## Project Structure 📁
