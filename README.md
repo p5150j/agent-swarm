@@ -57,10 +57,18 @@ graph TD
         K -->|Updates| D1
     end
 
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-    style C1 fill:#f9f,stroke:#333,stroke-width:1px
-    style D1 fill:#bbf,stroke:#333,stroke-width:1px
+    style C fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style D fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style C1 fill:#f5f5f5,stroke:#333,stroke-width:1px
+    style D1 fill:#f5f5f5,stroke:#333,stroke-width:1px
+    style B fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style E fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style F fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style G fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style H fill:#f5f5f5,stroke:#333,stroke-width:1px
+    style I fill:#f5f5f5,stroke:#333,stroke-width:1px
+    style J fill:#f5f5f5,stroke:#333,stroke-width:1px
+    style K fill:#f5f5f5,stroke:#333,stroke-width:1px
 ```
 
 ## Project Structure 📁
