@@ -2,11 +2,53 @@
 
 ![Agent Collaboration System Architecture](Screenshot%202025-05-17%20at%205.44.29%E2%80%AFPM.png)
 
+## Basics trasfer learning
+
+### LLM Transfer Learning Process
+
+```mermaid
+graph TD
+    subgraph "Foundation Training"
+        A[Large Text Data] --> B[Pre-training]
+        B --> C[Base LLM]
+    end
+
+    C --> D1[Task-Specific Data A]
+    C --> D2[Task-Specific Data B]
+    C --> D3[Task-Specific Data C]
+
+    D1 --> E1[Fine-tuning]
+    D2 --> E2[Fine-tuning]
+    D3 --> E3[Fine-tuning]
+
+    E1 --> F1[Medical Model]
+    E2 --> F2[Code Model]
+    E3 --> F3[Chat Model]
+```
+
+### LLM Context Window & Tokens
+
+```mermaid
+graph TD
+    A[Text Input] --> B[Tokenization]
+    B --> C[Tokens]
+    C --> D[Context Window]
+
+    subgraph "Context Window (Token Limit)"
+        E[Old Tokens]
+        F[New Tokens]
+    end
+
+    D --> E
+    D --> F
+
+    G[Token Limit Reached] --> H[Drop Oldest Tokens]
+    H --> I[Keep Recent Tokens]
+```
+
 ## Overview 🎯
 
 This project implements a multi-agent collaboration system where each agent (e.g., Product Owner, CTO) has a distinct persona, knowledge base, and communication style. Agents interact iteratively, leveraging their knowledge and role definitions to solve complex tasks together.
-
-Repo Theme Song: https://www.youtube.com/watch?v=ZxeBUTLrWMk
 
 ## Features ✨
 
@@ -15,7 +57,7 @@ Repo Theme Song: https://www.youtube.com/watch?v=ZxeBUTLrWMk
 - **Markdown diagrams and pseudocode** 📊: Product Owner uses Mermaid flowcharts; CTO uses Mermaid sequence diagrams and pseudocode.
 - **Iterative, collaborative dialog** 💭: Agents build on each other's reasoning, resulting in robust, realistic conversations.
 - **Emoji-enhanced communication** 😊: Agents use emojis to reinforce their personas and improve clarity.
-- **Agent battle script** ✅: Includes scripts to test agent communication and knowledge base usage.
+- **Automated testing** ✅: Includes scripts to test agent communication and knowledge base usage.
 
 ## System Architecture 🔧
 
